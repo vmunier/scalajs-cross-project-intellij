@@ -3,6 +3,10 @@ import scala.scalajs.js.Dynamic.{global => g}
 
 object Main extends js.JSApp {
   def main() = {
-    g.document.body.innerHTML = SharedTags.body.render
+    if (!js.isUndefined(g.document)) {
+      g.document.body.innerHTML = SharedTags.body.render
+    } else {
+      println(SharedTags.body)
+    }
   }
 }
