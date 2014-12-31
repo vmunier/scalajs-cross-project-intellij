@@ -10,3 +10,22 @@ The only important part in this repository to make IntelliJ happy, is to declare
 ## IntelliJ 14
 
 You will be prompted to convert the old format to a new format. Just click `Convert`.
+
+## Run the application
+
+Run the jvm project from sbt:
+```
+$ sbt
+> exampleJVM/run
+```
+Run the js project from sbt:
+```
+$ sbt
+> exampleJS/run
+```
+Run the javascript output file in a web browser:
+```
+$ sbt
+> exampleJS/fastOptJS
+$ open index-fastopt.html
+```
