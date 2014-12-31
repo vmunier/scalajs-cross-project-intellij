@@ -11,6 +11,17 @@ The only important part in this repository to make IntelliJ happy, is to declare
 
 You will be prompted to convert the old format to a new format. Just click `Convert`.
 
+## Changes in build.sbt
+
+Here's the annoying part. Every time you do some changes in build.sbt, import a fresh new IDEA project:
+```
+Inside IntelliJ, delete scalajs-cross-project-intellij, then
+$ cd scalajs-cross-project-intellij
+$ rm -r .idea/ .idea_modules/
+$ sbt gen-idea
+Inside IntelliJ, File/Open..., choose scalajs-cross-project-intellij to import all the projects
+```
+
 ## Run the application
 
 Run the jvm project from sbt:
